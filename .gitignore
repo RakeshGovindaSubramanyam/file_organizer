@@ -1,1 +1,6 @@
 .vnev
+__pycache__/
+*.pyc
+.vscode/
+build/
+*.spec
