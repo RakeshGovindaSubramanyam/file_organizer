@@ -49,31 +49,106 @@ class FileOrganizerApp:
             return
 
         extension_map = {
-            # Videos
-            '.mp4': 'Videos',
-            '.mov': 'Videos',
-            '.avi': 'Videos',
-            '.mkv': 'Videos',
-            # Audio
-            '.mp3': 'Music',
-            '.wav': 'Music',
-            '.flac': 'Music',
-            # Images
-            '.jpg': 'Images',
-            '.jpeg': 'Images',
-            '.png': 'Images',
-            '.gif': 'Images',
-            # Documents
-            '.pdf': 'Documents',
-            '.doc': 'Documents',
-            '.docx': 'Documents',
-            '.txt': 'Documents',
-            '.xlsx': 'Documents',
-            # Archives
-            '.zip': 'Archives',
-            '.rar': 'Archives',
-            '.7z': 'Archives'
+        # Videos
+        '.mp4': 'Videos',
+        '.mov': 'Videos',
+        '.avi': 'Videos',
+        '.mkv': 'Videos',
+        '.wmv': 'Videos',
+        '.flv': 'Videos',
+        '.webm': 'Videos',
+        '.mpeg': 'Videos',
+        '.3gp': 'Videos',
+        
+        # Audio
+        '.mp3': 'Music',
+        '.wav': 'Music',
+        '.flac': 'Music',
+        '.aac': 'Music',
+        '.ogg': 'Music',
+        '.wma': 'Music',
+        '.m4a': 'Music',
+        
+        # Images
+        '.jpg': 'Images',
+        '.jpeg': 'Images',
+        '.png': 'Images',
+        '.gif': 'Images',
+        '.bmp': 'Images',
+        '.tiff': 'Images',
+        '.svg': 'Images',
+        '.webp': 'Images',
+        '.ico': 'Images',
+        '.heic': 'Images',
+        
+        # Documents
+        '.pdf': 'Documents',
+        '.doc': 'Documents',
+        '.docx': 'Documents',
+        '.txt': 'Documents',
+        '.xlsx': 'Documents',
+        '.xls': 'Documents',
+        '.ppt': 'Documents',
+        '.pptx': 'Documents',
+        '.odt': 'Documents',
+        '.rtf': 'Documents',
+        '.csv': 'Documents',
+        '.tex': 'Documents',
+        
+        # Code Files
+        '.py': 'Code',
+        '.java': 'Code',
+        '.c': 'Code',
+        '.cpp': 'Code',
+        '.cs': 'Code',
+        '.js': 'Code',
+        '.html': 'Code',
+        '.css': 'Code',
+        '.php': 'Code',
+        '.sql': 'Code',
+        '.sh': 'Code',
+        '.json': 'Code',
+        '.xml': 'Code',
+        '.yaml': 'Code',
+        '.yml': 'Code',
+        
+        # Archives
+        '.zip': 'Archives',
+        '.rar': 'Archives',
+        '.7z': 'Archives',
+        '.tar': 'Archives',
+        '.gz': 'Archives',
+        '.bz2': 'Archives',
+        '.xz': 'Archives',
+        '.iso': 'Archives',
+        
+        # Executables
+        '.exe': 'Executables',
+        '.msi': 'Executables',
+        '.dmg': 'Executables',
+        '.app': 'Executables',
+        '.bat': 'Executables',
+        '.sh': 'Executables',
+        
+        # Design & 3D Models
+        '.psd': 'Design',
+        '.ai': 'Design',
+        '.xd': 'Design',
+        '.fig': 'Design',
+        '.sketch': 'Design',
+        '.dwg': 'Design',
+        '.blend': '3D Models',
+        '.stl': '3D Models',
+        '.fbx': '3D Models',
+        '.obj': '3D Models',
+        
+        # Miscellaneous
+        '.torrent': 'Torrents',
+        '.log': 'Logs',
+        '.dat': 'Data Files',
+        '.db': 'Database',
         }
+
 
         try:
             files = [f for f in os.listdir(directory) if os.path.isfile(os.path.join(directory, f))]
